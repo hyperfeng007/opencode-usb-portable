@@ -19,15 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
---------------------------------------------------------------------------------
-
-Third-party components bundled or referenced by this project:
-
-* opencode (https://github.com/anomalyco/opencode) - MIT License.
-  This tool repackages the official desktop build into a portable form; it does
-  not modify opencode's source code, only patches resources/app.asar at build
-  time, inside the user's own copy.
-* 7-Zip Extra (https://www.7-zip.org/) - GNU LGPL. See tools/7za/License.txt.
-* Git for Windows (https://gitforwindows.org/) - GPLv2. Downloaded optionally at
-  build time (--with-git), not distributed with this repository.

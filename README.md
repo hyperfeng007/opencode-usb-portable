@@ -88,17 +88,8 @@ asar 补丁参考实现   payload/patch-asar.mjs    Node 版参考补丁器（Go
 
 ## 许可
 
-本仓库自身代码：**MIT**（见 [LICENSE](LICENSE)）。
-
-第三方组件：
-
-| 组件 | 许可 | 说明 |
-|---|---|---|
-| [opencode](https://github.com/anomalyco/opencode) | MIT | 本工具只是把它做成便携形态，不修改其源码，只在构建时对归档做补丁 |
-| [7-Zip Extra](https://www.7-zip.org/) | LGPL | `tools/7za/`，用于解包官方安装包；许可证全文见该目录 |
-| [Git for Windows](https://gitforwindows.org/) | GPLv2 | 可选（构建时 `--with-git` 下载的 PortableGit，不随本仓库分发） |
-
-使用、分发前请确认符合各组件的许可条款。
+本仓库自身代码：**MIT**（见 [LICENSE](LICENSE)）；第三方组件（opencode / 7-Zip Extra / Git for Windows / models.dev 等）
+的许可与再分发说明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。使用、分发前请确认符合各组件的许可条款。
 
 ## 安全提示
 

@@ -1,3 +1,7 @@
+# 启用 CI：把本文件复制到 .github/workflows/release.yml（或直接在 GitHub 网页上新建同名文件粘贴内容）。
+# 说明：推送 workflow 文件需要 Personal Access Token 具备 workflow 权限，本仓库归档时使用的 token 没有该权限，
+#       因此 CI 配置放在这里，功能完全相同。
+
 name: build
 
 on:

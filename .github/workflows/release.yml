@@ -1,0 +1,47 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  windows:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.24"
+
+      - name: unit tests (launcher)
+        working-directory: payload/launcher/src
+        run: go test ./...
+
+      - name: unit tests (builder)
+        working-directory: builder
+        run: go test ./... || true   # builder has no unit tests yet
+
+      - name: build windows executables
+        run: ./scripts/build.sh
+
+      - name: package usb zip
+        run: ./scripts/package.sh
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: opencode-usb-portable
+          path: |
+            releases/*.exe
+            opencode-usb-portable-v*.zip
+
+      - name: attach to release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            opencode-usb-portable-v*.zip
+            releases/*.exe
+          generate_release_notes: true

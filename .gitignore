@@ -1,0 +1,34 @@
+# ---- build outputs (download them from Releases instead) ----
+releases/
+*.exe
+*.dll
+!tools/7za/7za.exe
+!tools/7za/7za.dll
+*.zip
+*.7z
+
+# ---- local test / packaging leftovers ----
+pack-v*/
+stage/
+usb*/
+accept*/
+gh-publish-local/
+*.png
+
+# ---- credentials and private data (never commit these) ----
+auth.json
+**/data/opencode/auth.json
+**/data/config/**
+model-policy.json
+models-report.json
+*.bak
+.env
+.env.*
+
+# ---- go ----
+/vendor/
+*.test
+
+# ---- misc ----
+.DS_Store
+Thumbs.db

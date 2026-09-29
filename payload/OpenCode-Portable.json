@@ -1,0 +1,6 @@
+{
+  "name": "OpenCode Portable",
+  "kind": "opencode-usb-portable",
+  "schema": 1,
+  "comment": "便携模式标记文件，请勿删除。启动器依靠它定位 U 盘根目录，所有数据都会写入同级的 data\\ 文件夹。"
+}
